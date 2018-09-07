@@ -2,8 +2,8 @@
     <div>
         <counter-value :count="count"></counter-value>
         <div>
-            <counter-button>+</counter-button>
-            <counter-button>-</counter-button>
+            <counter-button @clicked="increment">+</counter-button>
+            <counter-button @clicked="decrement">-</counter-button>
         </div>
     </div>
 </template>

@@ -1,9 +1,15 @@
 <template>
- <button><slot></slot></button>
+ <button @click="handleClick"><slot></slot></button>
 </template>
 
 <script>
 export default {
-    name: "CounterButton"
+    name: "CounterButton",
+    methods:{
+        handleClick(){
+            this.$emit('clicked')
+        }
+    }
 }
+
 </script>
