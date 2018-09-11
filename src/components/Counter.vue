@@ -4,6 +4,8 @@
         <div>
             <counter-button @clicked="increment">+</counter-button>
             <counter-button @clicked="decrement">-</counter-button>
+            <counter-button @clicked="multiplication">*2</counter-button>
+            <counter-button @clicked="division">/2</counter-button>
         </div>
     </div>
 </template>
@@ -28,6 +30,12 @@ export default {
         },
         decrement(){
             this.count--;
+        },
+        multiplication(){
+            this.count = this.count * 2;
+        },
+        division(){
+            this.count = this.count / 2;
         }
     }
 };
